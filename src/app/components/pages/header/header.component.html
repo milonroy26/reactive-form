@@ -1,0 +1,74 @@
+<!-- As a link -->
+<nav class="navbar bg-light">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Angular CRUD</a>
+        <button class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button"
+            class="btn btn-primary fw-bold">Add Employee</button>
+    </div>
+</nav>
+
+<table class="table container mt-2">
+    <thead>
+        <tr>
+            <th scope="col">Employee Id</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email Id</th>
+            <th scope="col">Mobile No</th>
+            <th scope="col">Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Milon</td>
+            <td>Roy</td>
+            <td>milon@gmail.com</td>
+            <td>01774138442</td>
+            <td>100$</td>
+            <td>
+                <button class="btn btn-info">Edit</button>
+                <button class="btn btn-danger ms-2">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+    tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label class="form-label">First Name</label>
+                    <input [(ngModel)]="inFname" type="text" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Last Name</label>
+                    <input [(ngModel)]="inLname" type="text" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Email Id</label>
+                    <input [(ngModel)]="inEmail" type="email" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Phone Number</label>
+                    <input [(ngModel)]="phoneNumber" type="email" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Salary</label>
+                    <input [(ngModel)]="inSelary" type="email" class="form-control">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button (click)="addInfo()" class="btn btn-info">Add</button>
+                <button class="btn btn-danger">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
