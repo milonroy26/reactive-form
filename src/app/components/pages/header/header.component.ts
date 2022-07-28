@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsersformService } from 'src/app/services/usersform.service';
 
 @Component({
   selector: 'app-header',
@@ -6,27 +7,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  public allUser:{uuid: string, name: string, email:string, issue:string, message:string}[] = [];
   // create name
-  public inFname:string = '';
-  public inLname:string = '';
-  public inEmail: string = '';
-  public phoneNumber:string = "";
-  public inSelary:number = 0;
+  public inuuid:string = '';
+  public inname:string = '';
+  public inemail: string = '';
+  public inissue:string = "";
+  public inmessage:string = "";
 
-  constructor() { }
+  constructor(
+    private UsersService: UsersformService,
+  ) { }
 
   ngOnInit(): void {
   }
 
-  addInfo(){
-    const userInfo = {
-      firstName: this.inFname,
-      lastName: this.inLname,
-      email: this.inEmail,
-      phoneNumber: this.phoneNumber,
-      selary: this.inSelary
+  postEmployeeDetils(){
+    const userData ={
+      uuid: this.inuuid,
+      name: this.inname,
+      email: this.inemail,
+      issue: this.inissue,
+      message: this.inmessage
     }
-    console.log(userInfo);
+  
   }
+  
 
 }

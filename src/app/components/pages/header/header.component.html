@@ -10,27 +10,28 @@
 <table class="table container mt-2">
     <thead>
         <tr>
-            <th scope="col">Employee Id</th>
-            <th scope="col">First Name</th>
-            <th scope="col">Last Name</th>
-            <th scope="col">Email Id</th>
-            <th scope="col">Mobile No</th>
-            <th scope="col">Salary</th>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email id</th>
+            <th scope="col">Issue</th>
+            <th scope="col">message</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>1</td>
             <td>Milon</td>
-            <td>Roy</td>
             <td>milon@gmail.com</td>
-            <td>01774138442</td>
-            <td>100$</td>
+            <td>no result</td>
+            <td>plj help me</td>
             <td>
                 <button class="btn btn-info">Edit</button>
                 <button class="btn btn-danger ms-2">Delete</button>
             </td>
         </tr>
+
+        
+        
     </tbody>
 </table>
 
@@ -45,28 +46,28 @@
             </div>
             <div class="modal-body">
                 <div class="mb-3">
-                    <label class="form-label">First Name</label>
-                    <input [(ngModel)]="inFname" type="text" class="form-control">
+                    <label class="form-label">Uuid</label>
+                    <input [(ngModel)]="inuuid" type="text" class="form-control">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Last Name</label>
-                    <input [(ngModel)]="inLname" type="text" class="form-control">
+                    <label class="form-label">Name</label>
+                    <input [(ngModel)]="inname" type="text" class="form-control">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Email Id</label>
-                    <input [(ngModel)]="inEmail" type="email" class="form-control">
+                    <input [(ngModel)]="inemail" type="email" class="form-control">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Phone Number</label>
-                    <input [(ngModel)]="phoneNumber" type="email" class="form-control">
+                    <label class="form-label">Issue</label>
+                    <input [(ngModel)]="inissue" type="text" class="form-control">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Salary</label>
-                    <input [(ngModel)]="inSelary" type="email" class="form-control">
+                    <label class="form-label">Message</label>
+                    <input [(ngModel)]="inmessage" type="text" class="form-control">
                 </div>
             </div>
             <div class="modal-footer">
-                <button (click)="addInfo()" class="btn btn-info">Add</button>
+                <button (click)="postEmployeeDetils()" class="btn btn-info">Add</button>
                 <button class="btn btn-danger">Close</button>
             </div>
         </div>
