@@ -15,4 +15,30 @@ export class UsersformService {
   postMessage(message: IUserCreate):Observable<any>{
     return this.http.post<any>('https://jsengine.herokuapp.com/contact/message/send', message);
   }
+
+  errorHandeller(error: HttpErrorResponse){
+    return throwError(error);
+  }
+
+  // getEmployee(){
+  //   return this.http.get <any>("http://localhost:3000/posts")
+  //   .pipe(map((res:any)=>{
+  //     return res;
+  //   }))
+  // }
+
+  // updateEmployee(data: any, id:number){
+  //   return this.http.put<any>("http://localhost:3000/posts/"+id, data)
+  //   .pipe(map((res:any)=>{
+  //     return res;
+  //   }))
+  // }
+
+  // deleteEmployee(id: number){
+  //   return this.http.delete<any>("http://localhost:3000/posts/"+id)
+  //   .pipe(map((res:any)=>{
+  //     return res;
+  //   }))
+  // }
+
 }

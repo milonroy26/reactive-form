@@ -8,6 +8,7 @@ import { UsersformService } from 'src/app/services/usersform.service'
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  public allUser:{uuid: string, name: string, email:string, issue:string, message:string}[] = [];
   // create name
 
   public name:string = '';
@@ -45,5 +46,6 @@ export class HeaderComponent implements OnInit {
     })
 
   }
+  
 
 }
